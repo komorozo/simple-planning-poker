@@ -1,13 +1,15 @@
 import { useState } from 'react';
+import {useNavigate} from 'react-router-dom'
 import './CreateGamePanel.css';
 
 const CreateGamePanel = () => {
     const [inputValue, setInputValue] = useState('');
+    const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log(inputValue)
-
+        navigate('game-room')
     }
     const handleInputValue = (e) => {
         console.log(e.target.value)
