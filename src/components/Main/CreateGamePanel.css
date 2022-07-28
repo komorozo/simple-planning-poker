@@ -1,0 +1,14 @@
+.new-game-panel {
+    height: 300px;
+    width: 450px;
+    background-color: cadetblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#create-new-game-form {
+    display: flex;
+    flex-direction: column;
+    height: 140px;
+    justify-content: space-evenly;
+}
