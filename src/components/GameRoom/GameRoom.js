@@ -1,9 +1,20 @@
-import React, { useContext } from 'react';
+// import React, { useContext } from 'react';
 import './GameRoom.css';
-import TableNameContext from '../../contexts/tableNameContext';
+import {useParams} from 'react-router-dom'
+// import TableNameContext from '../../contexts/tableNameContext';
+import { doc, getDoc } from 'firebase/firestore';
+import { db } from '../../lib/init-firebase';
+import { useState } from 'react';
 
 const GameRoom = () => {
-    const { tableName } = useContext(TableNameContext);
+    const {id} = useParams();
+    const [tableName, setTableName] = useState();
+
+    const docRef = doc(db, "Tables", id);
+    getDoc(docRef).then(
+        res => setTableName(res.data().name)
+     ).catch()
+
     return (
         <div className='game-table-container'>
             <div className='table-left'>
@@ -13,7 +24,7 @@ const GameRoom = () => {
             </div>
             <div className='table-middle'>
                 <div className='table-top'> text</div>
-                <div className='table-center table'> text</div>
+                <div className='table-center table'> {tableName}</div>
                 <div className='table-bottom'> text</div>
             </div>
             <div className='table-right'>
