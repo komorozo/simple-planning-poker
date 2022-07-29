@@ -9,7 +9,7 @@ const CreateGamePanel = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log(inputValue)
-        navigate('game-room')
+        navigate(inputValue)
     }
     const handleInputValue = (e) => {
         console.log(e.target.value)
