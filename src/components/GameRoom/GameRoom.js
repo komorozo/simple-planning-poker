@@ -1,12 +1,14 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
-import './GameRoom.css'
+import React, { useContext } from 'react';
+import './GameRoom.css';
+import TableNameContext from '../../contexts/tableNameContext';
 
 const GameRoom = () => {
-    const {id} = useParams()
-    return ( 
-        <div className='game-table'>`welcome to game room on table name: {id}`</div>
-     );
-}
- 
+    const { tableName } = useContext(TableNameContext);
+    return (
+        <div className='game-table'>
+            welcome to game room on table name: {tableName}
+        </div>
+    );
+};
+
 export default GameRoom;
