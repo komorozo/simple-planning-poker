@@ -1,10 +1,56 @@
-.game-table {
-    width: 500px;
-    height: 240px;
+.game-table-container {
+    height: 600px;
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    border-radius: 50px;
+    background-color: white;
+}
+
+.table {
+    width: 600px;
     background-color: #85bb25;
     border-radius: 110px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     color: white;
+    font-size: 69px;
+    opacity: 0.6;
+    text-transform: uppercase;
+}
+
+.table-right {
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+}
+.table-left {
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+}
+.table-middle {
+    flex-grow: 2;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+}
+.table-top {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+.table-bottom {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+.table-center {
+    flex-grow: 2;
+    display: flex;
+    align-items: center;
 }
